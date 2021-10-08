@@ -1,10 +1,8 @@
 package application;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-import entities.Funcionario;
+import entities.Estudante;
 
 public class main {
 
@@ -16,28 +14,29 @@ public class main {
 		float salario;
 		int quant;
 		
-		List<Funcionario> funcionarios = new ArrayList<>();
+		List<Funcionario> funcionarios
 		
 		System.out.print("How many employees will be registered? ");
 		quant = sc.nextInt();
 		sc.nextLine();
 				
 		for (int i = 0; i < quant; i++) {
-			System.out.print("id: ");
-			id = sc.nextInt();
-			sc.nextLine();
 			System.out.print("Nome: ");
 			nome = sc.nextLine();
-			System.out.print("Salario: ");
-			salario = sc.nextFloat();
+			System.out.print("Email: ");
+			email = sc.nextLine();
+			System.out.print("Room: ");
+			quarto = sc.nextInt();
 			sc.nextLine();
 			
-			Funcionario func = new Funcionario(id, nome, salario);
-			funcionarios.add(func);
 		}
 		
-		for (Funcionario f : funcionarios) {
-			System.out.println(f.toString());
+		for (int i = 0; i < 10; i++) {
+			if (quartos[i] != null) {
+				System.out.println("Rent #" + i + "\n" 
+								+ "Name: " + quartos[i].getNome() + "\n" 
+								+ "Email: " + quartos[i].getEmail());
+			}
 		}
 		
 		sc.close();

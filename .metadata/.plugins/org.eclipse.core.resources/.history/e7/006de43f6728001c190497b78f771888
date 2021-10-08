@@ -26,9 +26,9 @@ public class main {
 			System.out.print("id: ");
 			id = sc.nextInt();
 			sc.nextLine();
-			System.out.print("Nome: ");
+			System.out.print("Email: ");
 			nome = sc.nextLine();
-			System.out.print("Salario: ");
+			System.out.print("Room: ");
 			salario = sc.nextFloat();
 			sc.nextLine();
 			
