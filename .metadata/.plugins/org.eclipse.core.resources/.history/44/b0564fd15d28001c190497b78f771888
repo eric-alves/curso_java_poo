@@ -1,0 +1,45 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Estudante;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated constructor stub
+		Scanner sc = new Scanner(System.in);
+		String nome;
+		String email;
+		int quarto;
+		int quant;
+		
+		System.out.print("How many rooms will be rented? ");
+		quant = sc.nextInt();
+		sc.nextLine();
+		
+		Estudante[] quartos = new Estudante[10];
+		
+		for (int i = 0; i < quant; i++) {
+			System.out.println("Nome: ");
+			nome = sc.nextLine();
+			System.out.println("Email: ");
+			email = sc.nextLine();
+			System.out.println("Room: ");
+			quarto = sc.nextInt();
+			
+			quartos[quarto] = new Estudante(nome, email);
+		}
+		
+		for (int i = 0; i < 10; i++) {
+			if (quartos[i] != null) {
+				System.out.print("Rent #" + i
+								+ "Name: " + quartos[i].getNome()
+								+ "Email: " + quartos[i].getEmail());
+			}
+		}
+		
+		sc.close();
+	}
+
+}
