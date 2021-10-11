@@ -1,9 +1,0 @@
-package entities;
-
-public class conta {
-
-	public conta() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
